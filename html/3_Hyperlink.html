@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a name="top"></a>  <!--这是一个锚标记，名字不是必须的-->
+   
+   
+   <!--超链接用a标签来实现，-->
+   <!--这是页面间跳转超链接-->
+   <!--文本超链接 -->
+   <!--
+    target="_blank" 效果是新建一个网页来跳转
+    target="_self" 效果是在此页面打开，这个是默认跳转方式
+    target="_parent" 效果是在父级窗口打开
+    -->
+
+   <a href="https://www.google.com.my" target="_blank">点击我跳转到google</a>
+   <br/>
+   <!--也可以通过相对路径跳转-->
+   <a href="5_video_and_audio.html" target="_parent">点击我听音乐</a>
+   <br/>
+   <a href="5_video_and_audio.html" target="_parent">点击我看视频</a>
+   <hr/>
+   <!--图片超链接-->
+   <!--通过一个图片来跳转到google-->
+    <a href="https://www.google.com.my">
+        <img src="../resources/image/海报版式1.png" alt="avatar" 
+        title="jump to google"  width="560" height="315">
+    </a>
+
+    <!--特殊功能链接：
+    邮箱链接: mailto
+    
+    -->
+    <a href="malito:zimaoliang89@gmail.com" >通过邮箱联系我</a> 
+
+    <!--锚链接
+    在body的最上方，有一个用name作为标记的锚标记，或者说锚点
+    可以通过一个锚链接直接跳转到本页面的锚标记位置
+    当然，也可以跳转到其他页面的锚标记位置
+    锚链接的语法是 <a href="#锚点名称">超文本</a>
+    -->
+    <!--填充长度-->
+    <hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>
+    <hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>
+    <hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>
+    <hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/><hr/>
+    <a href="#top">回到顶部</a>
+    <!--跳去其他页面的指定位置-->
+    <a href="4_list_and_table.html#foot">去往 List&table 页面的底部</a>
+    
+</body>
+</html>

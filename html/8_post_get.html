@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<!--表单的作用是呈现一个选择框架，然后用户可以在这个表单中输入内容
+    ，然后这个内容传递给你选择的一个特顶网页-->
+
+    <!--action: 表达提交的位置 可以是一个网站，也可以是一个请求处理地址
+    method: post get 这个是提交的方式\
+    get 高效，但是不安全（可以在url中看到密码）
+    post 低效，但是安全，看不到密码（但是可以在检查那里看到），可以传输大文件-->
+
+    <form action="1_index.html" method="get">
+        <!--这是一个文本输入框-->
+        <!--几种标签的作用：
+            type-指定元素的类型
+            name-表单元素的ID
+            value-元素的初始值，type为radio的时候必须指定一个值 
+            size-指定表单元素的初始宽度，text,password以字符为单位，其他以像素（px）为单位
+            maxlengt-type 为text 或者password时限制最大字符数
+            check-当type为radio或者checkbox时指定按钮是否被选中
+        -->
+        <p>名字<input type="text" name="username" value="your name" size="10" maxlength="8">  </p>
+        <!--password 的形式是输入后变为星号但是可以view-->
+        <p>密码<input type="password" name="password">  </p>
+
+        <!--
+        单选框- input type ="radio" same name
+        -->
+        <p>
+        <input type="radio" value="男" name="gender"/>男
+        <input type="radio" value="女" name="gender"/>女
+        <input type="radio" value="保密" name="gender"/>保密
+        <input type="radio" value="非二元" name="gd"/>非二元
+        </p>
+
+        <!--
+        多选框- input type = "checkbox"  un-same name
+        -->
+        <p>
+            <input type="checkbox" value="睡觉" name="sleep">睡觉
+            <input type="checkbox" value="学习" name="study">学习
+            <input type="checkbox" value="游戏" name="play" >游戏
+            <input type="checkbox" value="聊天" name="chat" >聊天
+        </p>
+
+
+  
+       
+        <!--
+        input  button  普通按钮
+        -->
+        <p>
+            <input type="button" name="button1" value="点击变长">
+        </p>
+        <p>
+            <input type="image"  src="..\resources\image\海报版式1.png"
+             name="image" value="image" height="34px" width="56px">
+        </p>
+
+
+        <!--下拉框，列表框-->
+        
+        <P><select name="列表名称" id="">
+           <option value="选项值">1</option>
+           <option value="选项值">2</option>
+           <option value="选项值" selected>3</option>
+           <option value="选项值">4</option>
+        </select></P>
+        <!--文本域-->
+        <p>
+           <textarea name="textarea" cols="10" rows="1">da</textarea>
+        </p>
+
+        <!--文件域-->
+        <input type="file" name="files">
+        <input type="button" name="upload"value="上传"><!--实际上没有用-->
+
+        <!--
+        简单验证（实际没什么用）
+        为空的时候依然能够提交
+        -->
+        <p>邮箱 <input type="email"></p>
+        <p>URL  <input type="url"  ></p>
+        <p>数字  <input type="number" max="100" min="0" step="10"> </p>
+        <!--其中step是指在右边的一个调节按钮，按上/下是时候一次性跳的数-->
+        <p>滑块 <input type="range" name="vioce" min="0" max="100" step="1"> </p>
+        <!--滑块的值不太好直接表现出来-->
+        <P>搜索 <input type="search" name="search" >   </P>
+
+        <!--特殊标签
+        readonly:对text类有效，文本不能被用户更改
+        disable：禁用，对按钮类有效
+        -->
+        
+        <!--label  增强鼠标可用性-->
+        <label for="mark">点击我</label>
+        <input type="text" id="mark">
+
+        <!--
+        一些其他标签：
+        placeholder=  "将会在格中显示的，输入时会消失的提示文字"
+        required   有这个标签的必须要有信息才能提交(非空判断)
+        pattern    正则表达式
+         -->
+        <p> <input type="text" id="shuru" placeholder="随便输点东西"></p>
+
+
+         
+        <!--这个是两个提交按钮，一个是提交，一个是重置-->
+        <p>
+        <input type="submit">
+        <input type="reset" value="清空表单">
+        </p>
+    
+    </form>
+
+</body>
+</html>

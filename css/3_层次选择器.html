@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+/* 
+1.后代选择器  选择在某个元素的后面  比如，e后面包含fghi......不包含abcde.
+    body p{ color: red}------body后的所有p标签
+2.子选择器    选择某个元素的后一层   比如，祖爷爷的儿子是爷爷
+    body>p{ color: red}------body后一层的p标签
+3.相邻兄弟选择器   选择某一个元素的同一层中的下一个（相邻的）  选择的是弟弟（只选择一个）
+    .active + p { color: red} -----class类的标签的下一个
+4.通用选择器     选择某一个元素的同一层中的下的所有（不需要相邻）  选择的是弟弟（选择多个）
+    .active ~ p { color: red} -----calss类标签的下面所有兄弟
+ */
+</style>
+
+
+
+
+
+
+<body>
+    <!--层次选择器中，用到层次的概念-->
+    <!--例如body是最大框架，也可以是0层，body中的各个标签是1层，这些标签里面的是二级，以此类推-->
+    <p>一层0</p>
+    <p class="active">1层-a</p>
+    <p>1层-b</p>
+    <p>
+        1层-c
+        <a href="../html/1_index.html">html_index(二层)</a>
+    </p>
+    <p>
+        <ul>
+          <li><p>二层</p></li>
+          <li><p>二层</p></li>
+          <li><p>二层</p></li>
+          <li><p>二层</p></li>
+          <li>
+            <ul>
+                <li>三层</li>
+                <li>三层</li>
+                <li>三层</li>
+                <li>三层</li>
+                
+            </ul>
+          </li>
+        </ul>
+
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
